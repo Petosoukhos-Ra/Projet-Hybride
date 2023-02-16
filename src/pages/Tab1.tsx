@@ -1,8 +1,24 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar,IonList } from '@ionic/react';
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle } from '@ionic/react';
-import './Tab1.css';
+import React from 'react';
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonList,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonButton
+} from '@ionic/react';
 
-const Tab1: React.FC = () => {
+interface Tab1Props {
+  competitions: string[];
+}
+
+const Tab1: React.FC<Tab1Props> = ({ competitions }) => {
   return (
     <IonPage>
       <IonHeader>
@@ -12,73 +28,30 @@ const Tab1: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen>
         <IonList>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Compétitions</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+          <IonHeader collapse="condense">
+            <IonToolbar>
+              <IonTitle size="large">Compétitions</IonTitle>
+            </IonToolbar>
+          </IonHeader>
 
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>Ligue 1</IonCardTitle>
-            <IonCardSubtitle>Championnat de football</IonCardSubtitle>
-          </IonCardHeader>
+          {competitions.map((competition, index) => (
+            <IonCard key={index}>
+              <IonCardHeader>
+                <IonCardTitle>{competition.split(' - ')[0]}</IonCardTitle>
+                <IonCardSubtitle>{competition.split(' - ')[1]}</IonCardSubtitle>
+              </IonCardHeader>
 
-          <IonCardContent>
-            Ligue 1 Uber Eats
-          </IonCardContent>
+              <IonCardContent>
+                {competition.split(' - ')[0]}
+              </IonCardContent>
 
-          <IonButton fill="clear">Liste des matchs</IonButton>
-        </IonCard>
+              <IonButton fill="clear">Liste des matchs</IonButton>
+            </IonCard>
+          ))}
 
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>Ligue 2 </IonCardTitle>
-            <IonCardSubtitle>Championnat de football</IonCardSubtitle>
-          </IonCardHeader>
-          <IonCardContent>
-            Ligue 2 Conforama
-          </IonCardContent>
-
-          <IonButton fill="clear">Liste des matchs</IonButton>
-        </IonCard>
-
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>Champions League</IonCardTitle>
-            <IonCardSubtitle>Tournois de football</IonCardSubtitle>
-          </IonCardHeader>
-
-          <IonButton fill="clear">Liste des matchs</IonButton>
-        </IonCard>
-        
-      
-
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>Coupe de Fance</IonCardTitle>
-            <IonCardSubtitle>Tournois de football</IonCardSubtitle>
-          </IonCardHeader>
-
-          <IonButton fill="clear">Voir les Matchs</IonButton>
-        </IonCard>
-
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>Coupe du monde</IonCardTitle>
-            <IonCardSubtitle>Tournois de football</IonCardSubtitle>
-          </IonCardHeader>
-
-          <IonButton fill="clear">Voir les Matchs</IonButton>
-        </IonCard>
-
-        <IonButton expand="block" routerLink="/add-competition">Ajouter une compétition</IonButton>
-
-
+          <IonButton expand="block" routerLink="/add-competition">Ajouter une compétition</IonButton>
         </IonList>
       </IonContent>
-
-
     </IonPage>
   );
 };
