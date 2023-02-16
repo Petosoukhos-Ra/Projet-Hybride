@@ -1,0 +1,7 @@
+{
+  "name": "Prono-Hybride",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
