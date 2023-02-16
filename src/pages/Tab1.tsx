@@ -72,7 +72,8 @@ const Tab1: React.FC = () => {
           <IonButton fill="clear">Voir les Matchs</IonButton>
         </IonCard>
 
-        <IonButton expand="block">Ajouter une compétition</IonButton>
+        <IonButton expand="block" routerLink="/add-competition">Ajouter une compétition</IonButton>
+
 
         </IonList>
       </IonContent>
