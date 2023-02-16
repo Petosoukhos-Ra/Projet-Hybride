@@ -21,47 +21,43 @@ const Tab1: React.FC = () => {
         <IonCard>
           <IonCardHeader>
             <IonCardTitle>Ligue 1</IonCardTitle>
-            <IonCardSubtitle>Compétition de football</IonCardSubtitle>
+            <IonCardSubtitle>Championnat de football</IonCardSubtitle>
           </IonCardHeader>
 
           <IonCardContent>
-            Le Championnat de France de football, de plus haut niveau de la FFF. Il regroupe les meilleurs clubs de France métropolitaine et de Monaco.
+            Ligue 1 Uber Eats
           </IonCardContent>
 
-          <IonButton fill="clear">Voir les Matchs</IonButton>
+          <IonButton fill="clear">Liste des matchs</IonButton>
         </IonCard>
 
         <IonCard>
           <IonCardHeader>
-            <IonCardTitle>FA Cup</IonCardTitle>
-            <IonCardSubtitle>Compétition de football</IonCardSubtitle>
+            <IonCardTitle>Ligue 2 </IonCardTitle>
+            <IonCardSubtitle>Championnat de football</IonCardSubtitle>
           </IonCardHeader>
+          <IonCardContent>
+            Ligue 2 Conforama
+          </IonCardContent>
 
-          <IonButton fill="clear">Voir les Matchs</IonButton>
+          <IonButton fill="clear">Liste des matchs</IonButton>
         </IonCard>
 
         <IonCard>
           <IonCardHeader>
-            <IonCardTitle>LaLiga</IonCardTitle>
-            <IonCardSubtitle>Compétition de football</IonCardSubtitle>
+            <IonCardTitle>Champions League</IonCardTitle>
+            <IonCardSubtitle>Tournois de football</IonCardSubtitle>
           </IonCardHeader>
 
-          <IonButton fill="clear">Voir les Matchs</IonButton>
+          <IonButton fill="clear">Liste des matchs</IonButton>
         </IonCard>
         
-        <IonCard>
-          <IonCardHeader>
-            <IonCardTitle>Serie A</IonCardTitle>
-            <IonCardSubtitle>Compétition de football</IonCardSubtitle>
-          </IonCardHeader>
-
-          <IonButton fill="clear">Voir les Matchs</IonButton>
-        </IonCard>
+      
 
         <IonCard>
           <IonCardHeader>
-            <IonCardTitle>Super League</IonCardTitle>
-            <IonCardSubtitle>Compétition de football</IonCardSubtitle>
+            <IonCardTitle>Coupe de Fance</IonCardTitle>
+            <IonCardSubtitle>Tournois de football</IonCardSubtitle>
           </IonCardHeader>
 
           <IonButton fill="clear">Voir les Matchs</IonButton>
@@ -70,11 +66,13 @@ const Tab1: React.FC = () => {
         <IonCard>
           <IonCardHeader>
             <IonCardTitle>Coupe du monde</IonCardTitle>
-            <IonCardSubtitle>Compétition de football</IonCardSubtitle>
+            <IonCardSubtitle>Tournois de football</IonCardSubtitle>
           </IonCardHeader>
 
           <IonButton fill="clear">Voir les Matchs</IonButton>
         </IonCard>
+
+        <IonButton expand="block">Ajouter une compétition</IonButton>
 
         </IonList>
       </IonContent>
