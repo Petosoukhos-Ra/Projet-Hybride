@@ -19,7 +19,7 @@ import {
   IonIcon,
 } from '@ionic/react';
 import { trash } from 'ionicons/icons';
-import './Tab2.css';
+import './Tab1.css';
 import Tab3 from './Tab3';
 interface Match {
   id: number;

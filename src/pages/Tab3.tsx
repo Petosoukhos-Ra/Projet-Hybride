@@ -18,7 +18,7 @@ IonLabel,
 IonItem,
 IonTextarea,
 } from '@ionic/react';
-import './Tab3.css';
+import './Tab1.css';
 import Tab2 from './Tab2';
 interface Match {
 id: number;
