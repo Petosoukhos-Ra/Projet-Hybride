@@ -20,7 +20,7 @@ import {
 } from '@ionic/react';
 import { trash } from 'ionicons/icons';
 import './Tab2.css';
-
+import Tab3 from './Tab3';
 interface Match {
   id: number;
   team1: string;
@@ -32,6 +32,8 @@ interface Match {
 const Tab2: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
   const [showEditModal, setShowEditModal] = useState(false);
+  const [showPronosticModal, setShowPronosticModal] = useState(false);
+  const [selectedMatchIndex, setSelectedMatchIndex] = useState<number | null>(null);
   const [Matches, setMatches] = useState<Match[]>([
     {
       id: 1,
@@ -123,27 +125,36 @@ const Tab2: React.FC = () => {
             </IonToolbar>
           </IonHeader>
 
-          {Matches.map((Match, index) => (
-            <IonCard key={index}>
-              <IonCardHeader>
-                <IonCardTitle>{Match.team1} vs {Match.team2}</IonCardTitle>
-                <IonCardSubtitle>{Match.jour}  {Match.heure}</IonCardSubtitle>
-              </IonCardHeader>
+          {Matches.map((match, index) => (
+  <IonCard key={index}>
+    <IonCardHeader>
+      <IonCardTitle>{match.team1} vs {match.team2}</IonCardTitle>
+      <IonCardSubtitle>{match.jour} {match.heure}</IonCardSubtitle>
+    </IonCardHeader>
 
-              <IonButton            onClick={() => {
-              setSelectedMatchesIndex(index);
-              setShowEditModal(true);
-              setNewMatchesTeam1(Match.team1);
-              setNewMatchesTeam2(Match.team2);
-            }}
-          >
-            Modifier
-          </IonButton>
-          <IonButton onClick={() => handleDeleteMatch(index)}>
-            <IonIcon icon={trash} color="danger"/>
-          </IonButton>
-        </IonCard>
-      ))}
+    <IonButton /*onClick={() => {
+      setSelectedMatchIndex(index);
+      setShowPronosticModal(true);
+    }}*/href="Tab3">
+      Pronostiquer
+    </IonButton>
+
+    <IonButton onClick={() => {
+      setSelectedMatchIndex(index);
+      setShowEditModal(true);
+      setNewMatchesTeam1(match.team1);
+      setNewMatchesTeam2(match.team2);
+      setNewMatchesJour(match.jour);
+      setNewMatchesHeure(match.heure);
+    }}>
+      Modifier
+    </IonButton>
+    <IonButton onClick={() => handleDeleteMatch(index)}>
+      <IonIcon icon={trash} color="danger"/>
+    </IonButton>
+  </IonCard>
+))}
+
     </IonList>
 
     <IonModal isOpen={showModal} onDidDismiss={() => setShowModal(false)}>

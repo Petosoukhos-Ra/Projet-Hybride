@@ -8,7 +8,7 @@ ion-content {
   ion-title {
     font-size: 20px;
     font-weight: bold;
-    color: #288531;
+    color: #2bb539;
 
     
   }
@@ -54,7 +54,7 @@ ion-content {
     --background: #cc0000;
   }
   ion-button {
-    --color: rgb(9, 133, 3);
+    --color: rgb(18, 189, 8);
     --background: #333;
     border-radius: 30px;
     text-transform: uppercase;
@@ -95,6 +95,6 @@ ion-content {
 
   ion-icon {
     font-size: 20px;
-    color: #288531;
+    color: #27b135;
   }
   

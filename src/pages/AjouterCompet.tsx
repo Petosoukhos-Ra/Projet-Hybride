@@ -1,3 +1,6 @@
+
+//Non utilisé
+
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonInput, IonButton } from '@ionic/react';
 import React, { useState } from 'react';
 
@@ -33,3 +36,5 @@ const AddCompetitionPage: React.FC = () => {
 };
 
 export default AddCompetitionPage;
+
+//non utilisé
