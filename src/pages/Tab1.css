@@ -1,0 +1,100 @@
+/* Couleur de fond */
+ion-content {
+    --ion-background-color: #194e1e;
+    
+  }
+  
+  /* Titre */
+  ion-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #288531;
+
+    
+  }
+  ion-toolbar {
+    --background: #333; /* changer en la couleur de votre choix */
+  }
+  ion-tab-bar {
+    --background: #333; /* changer en la couleur de votre choix */
+  }
+  
+
+  /* Cartes des compétitions */
+  ion-card {
+    background-color: rgb(159, 159, 159);
+    margin: 10px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.77);
+  }
+  
+  ion-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  ion-card-subtitle {
+    font-size: 16px;
+    font-weight: normal;
+    color: rgb(49, 49, 49);
+  }
+  
+  ion-card-content {
+    font-size: 14px;
+    
+    color: #333;
+  }
+  
+  /* Boutons */
+
+  ion-button.delete {
+    --color: #fff;
+    --background: #cc0000;
+  }
+  ion-button {
+    --color: rgb(9, 133, 3);
+    --background: #333;
+    border-radius: 30px;
+    text-transform: uppercase;
+   
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 3px 20px;
+  }
+  
+  
+  
+  /* Modals */
+  ion-modal {
+    --background: rgba(0, 0, 0, 0.8);
+  }
+  
+  ion-input {
+    background-color: #676767;
+    border-radius: 10px;
+    color: #333;
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 5px 10px;
+  }
+  
+  ion-label {
+    color: #288531;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Icônes */
+  ion-icon[name='trash'] {
+    color: red;
+  }
+
+  ion-icon {
+    font-size: 20px;
+    color: #288531;
+  }
+  

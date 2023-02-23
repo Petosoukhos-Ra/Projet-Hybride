@@ -34,50 +34,54 @@ import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
+
 /* Theme variables */
 import './theme/variables.css';
 
 setupIonicReact();
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-      <IonRouterOutlet>
-        <Route exact path="/tab1">
-          <Tab1 />
-        </Route>
-        <Route exact path="/tab2">
-          <Tab2 />
-        </Route>
-        <Route exact path="/add-competition">
-          <AjouterCompet />
-        </Route>
-        <Route path="/tab3">
-          <Tab3 />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/tab1" />
-        </Route>
-      </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={trophy} />
-            <IonLabel>Compétitions</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={football} />
-            <IonLabel>Matchs</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={logoEuro} />
-            <IonLabel>Pronos</IonLabel>
-          </IonTabButton>
-          
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
+const App: React.FC = () => {
+  const [competitions, setCompetitions] = useState([]); // Définition de l'état initial
+
+  return (
+    <IonApp>
+      <IonReactRouter>
+        <IonTabs>
+          <IonRouterOutlet>
+            <Route exact path="/tab1">
+              <Tab1 />
+            </Route>
+            <Route exact path="/tab2">
+              <Tab2 />
+            </Route>
+            <Route exact path="/add-competition">
+              <AjouterCompet />
+            </Route>
+            <Route path="/tab3">
+              <Tab3 />
+            </Route>
+            <Route exact path="/">
+              <Redirect to="/tab1" />
+            </Route>
+          </IonRouterOutlet>
+          <IonTabBar slot="bottom">
+            <IonTabButton tab="tab1" href="/tab1">
+              <IonIcon icon={trophy} />
+              <IonLabel>Compétitions</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab2" href="/tab2">
+              <IonIcon icon={football} />
+              <IonLabel>Matchs</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="tab3" href="/tab3">
+              <IonIcon icon={logoEuro} />
+              <IonLabel>Pronos</IonLabel>
+            </IonTabButton>
+          </IonTabBar>
+        </IonTabs>
+      </IonReactRouter>
+    </IonApp>
+  );
+};
 
 export default App;
